@@ -16,7 +16,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "notes.winedark.ink",
+    baseUrl: "wine-dark-salon.vercel.app",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
@@ -47,7 +47,7 @@ const config: QuartzConfig = {
           dark: "#ebe4e8", // Off-white headers (like aged paper)
           secondary: "#9b7a99", // Wine-rose links (faded purple)
           tertiary: "#b896b5", // Lighter wine on hover
-          highlight: "rgba(83, 56, 81, 0.08)", // Subtle wine wash
+          highlight: "rgba(155, 122, 153, 0.08)", // Subtle wine wash
           textHighlight: "#2d1f2a", // Deep plum selection
         },
       },
