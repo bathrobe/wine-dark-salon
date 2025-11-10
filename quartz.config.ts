@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
+    pageTitle: "🍷🌊",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -16,7 +16,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    baseUrl: "notes.winedark.ink",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
@@ -40,15 +40,15 @@ const config: QuartzConfig = {
           textHighlight: "#fff23688",
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
+          light: "#0f0a0d", // Deep wine-black (like looking into aged wine)
+          lightgray: "#1a1216", // Subtle wine-stained background
+          gray: "#4a3d47", // Muted wine-rose for borders
+          darkgray: "#c4b5bd", // Aged parchment text (warm, not cold)
+          dark: "#ebe4e8", // Off-white headers (like aged paper)
+          secondary: "#9b7a99", // Wine-rose links (faded purple)
+          tertiary: "#b896b5", // Lighter wine on hover
+          highlight: "rgba(83, 56, 81, 0.08)", // Subtle wine wash
+          textHighlight: "#2d1f2a", // Deep plum selection
         },
       },
     },

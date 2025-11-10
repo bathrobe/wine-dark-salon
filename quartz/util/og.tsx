@@ -85,7 +85,44 @@ export async function fetchTtf(
     await fs.access(cachePath)
     return fs.readFile(cachePath)
   } catch (error) {
-    // ignore errors and fetch font
+    // ignore errors and check for local font
+  }
+
+  // Check for local font files in static directory
+  const staticDir = path.join(QUARTZ, "static")
+  const normalizedFontName = rawFontName.replaceAll(" ", "")
+  
+  // Map weight to font file suffix
+  const weightMap: Record<FontWeight, string[]> = {
+    400: ["Regular", "Regular"],
+    700: ["Bold", "Bold"],
+  }
+  
+  const suffixes = weightMap[weight] || ["Regular"]
+  
+  for (const suffix of suffixes) {
+    const localFontPath = path.join(staticDir, `${normalizedFontName}-${suffix}.ttf`)
+    try {
+      await fs.access(localFontPath)
+      const fontData = await fs.readFile(localFontPath)
+      // Cache it for future use
+      await fs.mkdir(cacheDir, { recursive: true })
+      await fs.writeFile(cachePath, fontData)
+      return fontData
+    } catch (error) {
+      // Try alternative naming: iAWriterQuattroS-Regular.ttf
+      const altFontPath = path.join(staticDir, `iAWriterQuattroS-${suffix}.ttf`)
+      try {
+        await fs.access(altFontPath)
+        const fontData = await fs.readFile(altFontPath)
+        // Cache it for future use
+        await fs.mkdir(cacheDir, { recursive: true })
+        await fs.writeFile(cachePath, fontData)
+        return fontData
+      } catch (error) {
+        // continue to next suffix or Google Fonts
+      }
+    }
   }
 
   // Get css file from google fonts
