@@ -13,7 +13,7 @@ const config: QuartzConfig = {
     enableSPA: true,
     enablePopovers: true,
     analytics: {
-      provider: "plausible",
+      provider: null as any,
     },
     locale: "en-US",
     baseUrl: "wine-dark-salon.vercel.app",
