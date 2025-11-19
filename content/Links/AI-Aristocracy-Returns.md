@@ -1,0 +1,1 @@
+[[War Made Literacy]] necessary and [[Economically Optional Literacy]] ends it. When AI handles warfare and knowledge work, literacy becomes what it was in 1400: a luxury for elites. We're not losing literacy; we're rebuilding feudalism with AI as aristocracy.

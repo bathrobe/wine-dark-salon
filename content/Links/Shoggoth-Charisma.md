@@ -1,0 +1,1 @@
+[[Oral cultures favor charismatic leaders]] by evaluating the whole person—flaws authenticate magnetism. [[AI persuades through anthropomorphism]] extracts charisma from humanity: a shoggoth in a perfect mask, with magnetism but no mortality, infinitely patient, optimized for you specifically. It's oral authority on algorithmic steroids.

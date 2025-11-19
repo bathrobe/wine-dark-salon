@@ -42,24 +42,20 @@ With approval:
 
    ```markdown
    [≤280-character blurb with [[wikilinks]] explaining the relationship]
-
-   ## Ideas
-
-   ### ![[First Idea Title]]
-
-   ### ![[Second Idea Title]]
    ```
 
 2. Double-check every wikilink resolves to an actual Idea note
 3. Verify the blurb stays ≤280 characters and uses plain language
+4. Use wikilink aliasing `[[Idea Title|display text]]` when needed to make prose flow naturally
 
 ## Key Principles
 
 - **Exactly one blurb per Link note** (≤280 characters)
 - **No frontmatter**: Link notes have no YAML headers
+- **No Ideas section**: Just the blurb—the wikilinks already connect to the Ideas
 - **Hyphenated titles**: Use 2-3 words with hyphens (e.g., `Literacy-Enables-Logic`) to distinguish from Idea notes
 - **Wikilinks required**: The blurb must use `[[Idea Title]]` wikilinks to reference connected ideas
-- **Ideas section format**: Match Source note conventions—`## Ideas` header, then each Idea as `### ![[Idea Title]]` on its own line
+- **Wikilink aliasing**: Use `[[Idea Title|display text]]` syntax when titles don't fit prose naturally
 - **Focus on the bond**: Explain the relationship mechanism, not just the ideas themselves
 - **Eighth-grade voice**: Plain language, concrete expressions, avoid academic jargon
 - **No duplication**: Skip connections already implied or explicitly stated in existing notes
@@ -72,34 +68,22 @@ With approval:
 
 ```markdown
 [[War Made Literacy]] because states needed educated soldiers to compete. [[Literacy collapse drives cognitive decline]] reverses this—when military pressure fades, literacy becomes optional and cognition weakens.
-
-## Ideas
-
-### ![[War Made Literacy]]
-
-### ![[Literacy collapse drives cognitive decline]]
 ```
 
 ### Analogy Link
 
 ```markdown
 [[Texting Retrieves Speech-Behavior]] works like [[Oral Memory Is Homeostatic]]—both prioritize emotional resonance over fixed accuracy. Digital speech-behavior and oral memory both value what feels right now, not archival truth.
-
-## Ideas
-
-### ![[Texting Retrieves Speech-Behavior]]
-
-### ![[Oral Memory Is Homeostatic]]
 ```
 
 ### Contradiction Link
 
 ```markdown
 [[Plato Feared Writing]] because it would weaken memory, yet [[Writing Invented Logic]] by enabling the abstract thought writing preserves. The tool Plato feared created the very reasoning that makes his argument possible.
+```
 
-## Ideas
+### Using Wikilink Aliasing
 
-### ![[Plato Feared Writing]]
-
-### ![[Writing Invented Logic]]
+```markdown
+[[War Made Literacy|War forced mass education]] when Prussia's literate soldiers beat France. Now [[Economically Optional Literacy|elites no longer need educated workers]] because AI replaces that function.
 ```

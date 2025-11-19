@@ -1,0 +1,1 @@
+This vault explores post-literacy: the mid-2020s phenomenon where younger people in developed nations are losing literacy and literate culture's hallmarks, morphing into something resembling pre-literate cultures while also becoming something new. Drawing from Walter Ong, Marshall McLuhan, Neil Postman, and Andrey Mir.

@@ -42,7 +42,7 @@ Confirm saving location (`content/Sources/<Abbrev Title - Lastname>.md`) and ask
 
 ### Step 2: Draft Idea Notes
 
-Identify five distinct, non-overlapping ideas from the article and present them explicitly as **Proposed Atomic Ideas**. Each proposal is a 2–3 word title that reads well in the sidebar, one ≤280-character blurb describing the idea, and one corroborating quote. Keep tone plain, cite quotes directly, reuse existing proper-noun titles when they already exist in the vault, and skip any Summary header—go straight from the title to the blurb.
+Identify five distinct, non-overlapping ideas from the article and present them explicitly as **Proposed Atomic Ideas**. Each proposal is a 2–3 word title that reads well in the sidebar, one ≤280-character blurb describing the idea, and one corroborating quote. Keep tone plain, cite quotes directly, reuse existing proper-noun titles when they already exist in the vault, and skip any Summary header—go straight from the title to the blurb. Write the blurbs at an eighth-grade reading level: prefer concrete language, unpack abstractions into simpler expressions, and lean on concise analogies when they clarify without distorting the original meaning.
 
 ```markdown
 # <Idea Title>
@@ -60,7 +60,7 @@ With approval:
 
 1. Save the Source note to `content/Sources/<Abbrev Title - Lastname>.md` (frontmatter + Summary + blank `## Ideas` if not already written).
 2. Save each selected Idea note to `content/Ideas/<Idea Title>.md` using the format from Step 2.
-3. Return to the Source note and populate the `## Ideas` section with embedded wiki links, one per Idea, e.g.:
+3. Return to the Source note and populate the `## Ideas` section with embedded wiki links, one per Idea. Each embed must sit on its own `### ![[Idea Title]]` line directly under `## Ideas` (never place `##` and an embed on the same line), e.g.:
    ```
    ## Ideas
    ### ![[Idea Title]]
@@ -73,6 +73,8 @@ With approval:
 - **Exactly one blurb + one quote** in every Source and Idea note section (≤280 characters for blurbs)
 - **No YAML title field**: never add `title:` to Source or Idea frontmatter; store article titles under another key (e.g., `article_title`) instead
 - **Match precedent**: skim another Source note’s `## Ideas` block before writing so headers, spacing, and wiki links align with the established pattern
+- **Ideas layout**: keep the `## Ideas` header, then list each embed as a `### ![[Idea Title]]` line—never use `##` headings for embeds or share a line with the `## Ideas` header
+- **Eighth-grade voice**: Ideas stay at an eighth-grade reading level, simplifying abstract concepts, using analogies when useful, and avoiding default academic phrasing while staying faithful to the source
 - **Stay on theme** by re-reading `VAULT_THEME.md` and scanning existing notes before writing
 - **No duplication**: skip any idea already in the vault or merge it into an existing note
 - **Clarity and brevity**: plain tone, eighth-grade reading level, no tweet-speak or promotion

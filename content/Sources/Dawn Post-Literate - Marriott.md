@@ -13,4 +13,4 @@ Smartphones reverse the 18th-century reading revolution that built modern democr
 
 ## Ideas
 
-### ![[Literacy collapse drives cognitive decline]]
+![[Literacy collapse drives cognitive decline]]

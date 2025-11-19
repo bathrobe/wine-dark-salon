@@ -13,8 +13,8 @@ AI chatbots accelerate the shift from literate to oral culture by making convers
 
 ## Ideas
 
-### ![[Chatbots leverage conversation]]
+![[Chatbots leverage conversation]]
 
-### ![[Oral cultures favor charismatic leaders]]
+![[Oral cultures favor charismatic leaders]]
 
-### ![[AI persuades through anthropomorphism]]
+![[AI persuades through anthropomorphism]]
