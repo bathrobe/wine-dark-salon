@@ -60,20 +60,23 @@ With approval:
 
 1. Save the Source note to `content/Sources/<Abbrev Title - Lastname>.md` (frontmatter + Summary + blank `## Ideas` if not already written).
 2. Save each selected Idea note to `content/Ideas/<Idea Title>.md` using the format from Step 2.
-3. Return to the Source note and populate the `## Ideas` section with embedded wiki links, one per Idea. Each embed must sit on its own `### ![[Idea Title]]` line directly under `## Ideas` (never place `##` and an embed on the same line), e.g.:
+3. Return to the Source note and populate the `## Ideas` section with embedded wiki links, one per Idea. **CRITICAL: Each embed is just a bare wiki link on its own line—NO markdown headers (`###`) before the embed.** The format is:
    ```
    ## Ideas
-   ### ![[Idea Title]]
+
+   ![[Idea Title]]
+
+   ![[Another Idea Title]]
    ```
-   (Only the headers + links live here; the blurbs and quotes stay inside the Idea files.)
+   NOT `### ![[Idea Title]]`. The embeds sit directly under `## Ideas` with no additional header markup.
 4. Double-check every link resolves, quotes stay faithful to the article, and wording matches the vault theme.
 
 ## Key Principles
 
 - **Exactly one blurb + one quote** in every Source and Idea note section (≤280 characters for blurbs)
 - **No YAML title field**: never add `title:` to Source or Idea frontmatter; store article titles under another key (e.g., `article_title`) instead
-- **Match precedent**: skim another Source note’s `## Ideas` block before writing so headers, spacing, and wiki links align with the established pattern
-- **Ideas layout**: keep the `## Ideas` header, then list each embed as a `### ![[Idea Title]]` line—never use `##` headings for embeds or share a line with the `## Ideas` header
+- **Match precedent**: skim another Source note's `## Ideas` block before writing so headers, spacing, and wiki links align with the established pattern
+- **Ideas layout**: keep the `## Ideas` header, then list each embed as a plain `![[Idea Title]]` line with **NO markdown header** (`###`) before it—embeds are bare wiki links on their own lines, not headers
 - **Eighth-grade voice**: Ideas stay at an eighth-grade reading level, simplifying abstract concepts, using analogies when useful, and avoiding default academic phrasing while staying faithful to the source
 - **Stay on theme** by re-reading `VAULT_THEME.md` and scanning existing notes before writing
 - **No duplication**: skip any idea already in the vault or merge it into an existing note

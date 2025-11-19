@@ -15,12 +15,12 @@ Writing transformed human consciousness from oral-poetic memory to abstract logi
 
 ## Ideas
 
-### ![[Oral Cultures Think in Poetry]]
+![[Oral Cultures Think in Poetry]]
 
-### ![[Writing Invented Logic]]
+![[Writing Invented Logic]]
 
-### ![[Oral Memory Is Homeostatic]]
+![[Oral Memory Is Homeostatic]]
 
-### ![[Scholarly Language Enabled Science]]
+![[Scholarly Language Enabled Science]]
 
-### ![[Plato Feared Writing]]
+![[Plato Feared Writing]]

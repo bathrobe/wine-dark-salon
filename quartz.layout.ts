@@ -1,66 +1,76 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
-import * as Component from "./quartz/components"
+import ArticleTitle from "./quartz/components/ArticleTitle"
+import Breadcrumbs from "./quartz/components/Breadcrumbs"
+import Backlinks from "./quartz/components/Backlinks"
+import ConditionalRender from "./quartz/components/ConditionalRender"
+import ContentMeta from "./quartz/components/ContentMeta"
+import DesktopOnly from "./quartz/components/DesktopOnly"
+import Explorer from "./quartz/components/Explorer"
+import Flex from "./quartz/components/Flex"
+import Footer from "./quartz/components/Footer"
+import Graph from "./quartz/components/Graph"
+import Head from "./quartz/components/Head"
+import MobileOnly from "./quartz/components/MobileOnly"
+import PageTitle from "./quartz/components/PageTitle"
+import ReaderMode from "./quartz/components/ReaderMode"
+import Search from "./quartz/components/Search"
+import Spacer from "./quartz/components/Spacer"
+import TagList from "./quartz/components/TagList"
+import TableOfContents from "./quartz/components/TableOfContents"
+import ViewOriginalLink from "./quartz/components/ViewOriginalLink"
 
-// components shared across all pages
+const leftSidebarComponents = [
+  PageTitle(),
+  MobileOnly(Spacer()),
+  Flex({
+    components: [
+      {
+        Component: Search(),
+        grow: true,
+      },
+      {
+        Component: ReaderMode(),
+      },
+    ],
+    direction: "row",
+    gap: "1rem",
+  }),
+  Explorer(),
+]
+
+const rightSidebarComponents = [Graph(), DesktopOnly(TableOfContents()), Backlinks()]
+
+const breadcrumbs = ConditionalRender({
+  component: Breadcrumbs(),
+  condition: (props) => props.fileData.slug !== "index",
+})
+
+const sourceLink = ConditionalRender({
+  component: ViewOriginalLink(),
+  condition: (props) => (props.fileData.slug ?? "").startsWith("Sources/"),
+})
+
 export const sharedPageComponents: SharedLayout = {
-  head: Component.Head(),
+  head: Head(),
   header: [],
-  afterBody: [],
-  footer: Component.Footer({
+  footer: Footer({
     links: {
       GitHub: "https://github.com/jackyzha0/quartz",
       "Discord Community": "https://discord.gg/cRFFHYye7t",
     },
   }),
+  afterBody: [],
 }
 
-// components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
-  beforeBody: [
-    Component.ConditionalRender({
-      component: Component.Breadcrumbs(),
-      condition: (page) => page.fileData.slug !== "index",
-    }),
-    Component.ArticleTitle(),
-    Component.ContentMeta(),
-    Component.TagList(),
-  ],
-  left: [
-    Component.PageTitle(),
-    Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        { Component: Component.ReaderMode() },
-      ],
-    }),
-    Component.Explorer(),
-  ],
-  right: [
-    Component.Graph(),
-    Component.DesktopOnly(Component.TableOfContents()),
-    Component.Backlinks(),
-  ],
+  beforeBody: [breadcrumbs, ArticleTitle(), ContentMeta(), TagList(), sourceLink],
+  left: leftSidebarComponents,
+  right: rightSidebarComponents,
 }
 
-// components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
-  left: [
-    Component.PageTitle(),
-    Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-      ],
-    }),
-    Component.Explorer(),
-  ],
+  beforeBody: [Breadcrumbs(), ArticleTitle(), ContentMeta()],
+  left: leftSidebarComponents,
   right: [],
 }
+

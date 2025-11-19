@@ -1,0 +1,19 @@
+.view-original-link {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--gray);
+  text-transform: none;
+
+  a {
+    color: var(--secondary);
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+    transition: color 0.2s ease;
+  }
+
+  a:hover,
+  a:focus-visible {
+    color: var(--tertiary);
+  }
+}
+
