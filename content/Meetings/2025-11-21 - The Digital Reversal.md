@@ -1,5 +1,4 @@
 ---
-title: "The Digital Reversal"
 date: 2025-11-21
 url: https://interintellect.com/salons/wine-dark-1-the-digital-reversal
 ---
@@ -20,6 +19,5 @@ First episode of the Wine Dark reading group. Exploring foundational texts on po
 - [[Dawn Post-Literate - Marriott]]
 - [[Post-Literate Society - Sun]]
 - [[Used to Read - McCormack]]
-- From Post-literate to Posthuman - Katherine Dee
 - [[Digital Orality - Mir]]
 - [[Orality & Literacy - Fettes]]
