@@ -1,0 +1,1 @@
+[[Oral Cultures Think in Poetry|Oral cultures thought in poetry]], using formulaic phrases like "wine-dark sea" for mnemonic survival. [[Texting Retrieves Speech-Behavior|Texting retrieves speech-behavior]] and closes the horseshoe with memes as digital epithets—"it's giving" works like Homeric formulas. Internet language IS oral epistemology.
