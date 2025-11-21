@@ -5,6 +5,8 @@ url: https://interintellect.com/salons/wine-dark-1-the-digital-reversal
 
 First episode of the Wine Dark reading group. Exploring foundational texts on post-literacy and sketching out a research program.
 
+[Slides](https://slides.com/bathrobe/2025-template-805393?token=QCLcZFVr)
+
 ## Research Questions
 
 - Is [[Wine-Dark-Memes|the horseshoe real]]? Are internet memes epistemically identical to Homeric formulas?
